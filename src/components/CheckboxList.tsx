@@ -18,6 +18,8 @@ const CheckboxList = (props:any) => {
       ) 
     );
   };
+}
+
 
 
 
@@ -28,12 +30,15 @@ const CheckboxList = (props:any) => {
         name: props.addToDo,
         checked: false
       };
-
       setItems(items => [...items, newToDo]);
       
-      console.log(items)
     }
-  }, [props.numberOfClicks]); // Kör när submitCount ändras
+  }, [props.numberOfClicks]); // Kör när numberOfClicks ändras
+
+
+  useEffect(() => {
+    console.log(items);
+  }, [items]);
 
 
   return (

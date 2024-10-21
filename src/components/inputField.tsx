@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import CheckboxList from './CheckboxList';
 
+
 const InputField = () => {
    const [inputValue, setInputValue] = useState('');
 
